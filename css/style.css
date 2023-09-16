@@ -21,11 +21,12 @@ img{
     width: 100%;
 }
 nav ul{
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(70px,1fr));
+    gap: 20px;
     margin: 10px 0 0 0;
 }
 nav{
-    margin-left: 210px;
+    margin-left: 150px;
 }
 .menu ul li{
     text-align:center;
@@ -44,10 +45,10 @@ a:hover{
     color: darkorange;
     
 }
-.menu ul li:hover{
+/* .menu ul li:hover{
     background-color: rgb(167, 167, 167);
     border-radius: 5px;
-}
+} */
 .fa-angle-down{
     margin-left: 10px;
     text-decoration: none;
@@ -90,71 +91,78 @@ a:hover{
     height: 550px;
 } */
 
-/* Next to Banner */
+/* ----------------------------------Next to Banner--------------------------- */
 
-.nxt-banner{
-    margin: -43px 25px 0 25px;
-}
 .nxt-ban{
+    margin: -2.5rem 0 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px;
 }
 .nxt-ban span{
     font-size: 14px;
     color: rgba(0, 0, 0, 0.699);
 }
-.km{
-    margin: 15px 0 0 0;
-}
-.nb-card1, .nb-card2, .nb-card3{
-    display: flex;
+.ncard a{
+    display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
+    align-items: center;
     background-color: rgb(255, 255, 255);
-    padding: 15px;
-    column-gap: 150px;
-    line-height: 2;
-    /* box-shadow: ; */
+    padding: 15px 25px;
+    line-height: 1.5;
+    min-width: 200px;
+    width: 350px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.15);
 }
-.nb-card1:hover{
+.ncard a:hover{
     color: white;
-    background-color: aqua;
+    transform: scale(1.1,1.05);
+    margin-bottom: -3px;
+    line-height: 1.6;
+    transition: all .3s  linear;
+
+}
+.nb-card1 a:hover,.nb-card3 a:hover{
+    background:linear-gradient(rgb(45, 20, 114), rgb(20, 84, 136));
+}
+.nb-card2 a:hover{
+    background:linear-gradient(rgb(243, 102, 8), rgb(240, 168, 35));
+}
+.ncard a:hover span{
+    color: white;
 }
 
 /* ------------------------------Index page Block 1---------------------------- */
 
 .block1{
-    margin: 10px 40px;
+    margin: 20px 40px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap:20px;
     box-shadow: 0px 0px 16px 0;
-    gap: 10px;
 }
 .b1-card{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     padding: 20px;
-    z-index: -1;
-    gap: 15px;
+    min-width: 350px;
+    justify-items: center;
+    align-items: center;
 }
 .b1-card img{
     border-radius: 50%;
-    height: 170px;
     width: 170px;
 }
 .b1-card h3{
-    font-size: 24px;
+    font-size: 22px;
     color:rgb(21, 21, 68);
 }
 .b1-card p{
     color:rgba(21, 21, 68, 0.829);
     font-size:17px;
-}
-.b1-card-sec2{
-    position: relative;
-    top: 20px;   
+    line-height: 1.5;
 }
 
 /* ------------------------------Index page Block 2---------------------------- */
@@ -219,8 +227,8 @@ a:hover{
 /* -------------------------------------------Footer Section------------------------------------ */
 .footer{
     display: grid;
-    margin: 15px 0 0 0;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 25px;
     background-color: rgba(0, 0, 0, 0.76);
     padding: 23PX 0 15px 0;
 }
@@ -248,7 +256,7 @@ p{
     position: sticky;
     bottom: 0;
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
     background-color: rgb(0, 0, 0);
     padding: 15PX 0 10px 0;
 }
@@ -267,7 +275,7 @@ p{
 }
 .cs a{
     padding: 0px;
-    margin: 0 0 0 -170px;
+    margin: 0 0 0 -220px;
 }
 .cs i{
     color: green;
